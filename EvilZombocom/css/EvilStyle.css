@@ -1,7 +1,9 @@
+html {
+    background-image: linear-gradient(darkred, black, black);
+    background-repeat: no-repeat;
+    height: 100%;
+}
 body{
-    background-color: #FFFFFF;
-    background-image: url('zomboPics/zombo_bg.png');
-    background-repeat: repeat-x;
     display: flex;
     flex-direction: column;
     justify-content: center;
