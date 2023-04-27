@@ -1,12 +1,29 @@
-body{
+
+html {
+    min-height: 100%;
+    margin: 0;
+}
+body {
+    transition: all 1s linear;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.background {
     background-color: #FFFFFF;
     background-image: url('zomboPics/zombo_bg.png');
     background-repeat: repeat-x;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
+.evil-background {
+    background-image: linear-gradient(darkred, black, black, black);
+    background-repeat: no-repeat;
+    height: 200%;
+}
+
 header{
     width: 90%;
     text-align: center;
@@ -17,9 +34,18 @@ header{
     max-height: 217px;
     max-width: 1200px;
 }
+#button {
+    margin-top: 5%;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.479);
+}
 
 .spin{
     animation: spin .5s infinite linear;
+}
+.evil-spin{
+    animation: evilSpin .5s infinite linear;
 }
 
 .flicker{
@@ -37,6 +63,14 @@ header{
         transform:rotate(0deg);
     }
     to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes evilSpin {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
         transform:rotate(-360deg);
     }
 }
